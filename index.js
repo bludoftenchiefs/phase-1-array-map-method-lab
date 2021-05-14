@@ -12,5 +12,33 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+     return tutorials.map(function(tutorial){
+      let words = tutorial.split(' ');
+      let explicitWords = words.map(function(word){
+          return word[0].toUpperCase() + word.substring(1);
+        }).join(' ');
+        console.log(explicitWords);
+        return explicitWords;
+      });
+  
+  // const newTutorial = 'what does the this keyword mean?';
+  //   const words = mySentence.split('');
+
+  //   for (let i = 0; i < words.length; i++) {
+  //       words[i] + words[i][0].toUpperCase() + words[i].substr(1);
+  //   }
+
+  //   words.join('');
+  // return tutorials
+
+//   const mySentence = "freeCodeCamp is an awesome resource";
+// const words = mySentence.split(" ");
+
+// words.map((word) => { 
+//     return word[0].toUpperCase() + word.substring(1); 
+// }).join(" ");
+
 }
+
+
+
